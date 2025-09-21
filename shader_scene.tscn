@@ -16,7 +16,7 @@ shader = ExtResource("2_phy77")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_phy77"]
 shader = ExtResource("2_wxt11")
-shader_parameter/alpha = 0.7532886666666666
+shader_parameter/alpha = 0.5640297777777779
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5xgsd"]
 shader = ExtResource("2_r5xtw")
