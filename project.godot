@@ -12,8 +12,8 @@ config_version=5
 
 config/name="Godot Shader"
 run/main_scene="uid://b7h1ockgv2v43"
-config/features=PackedStringArray("4.5", "Mobile")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.5", "C#", "Mobile")
+config/icon="res://Assets/Icon/icon.svg"
 
 [dotnet]
 
