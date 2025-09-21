@@ -1,0 +1,48 @@
+[gd_scene load_steps=11 format=3 uid="uid://b7h1ockgv2v43"]
+
+[ext_resource type="Shader" uid="uid://drat3xfnnvyxv" path="res://Shaders/Aqua Shader.gdshader" id="1_jmqdj"]
+[ext_resource type="Shader" uid="uid://dobe1jljleig7" path="res://Shaders/UV Rainbow.gdshader" id="2_r5xtw"]
+[ext_resource type="Shader" uid="uid://c3le4un2c85eq" path="res://Shaders/Trinkle.gdshader" id="2_wxt11"]
+[ext_resource type="Script" uid="uid://cv8bwvvmr7anj" path="res://Scripts/trinkle.gd" id="3_t2p1b"]
+[ext_resource type="Shader" uid="uid://dug3leaejdcvm" path="res://Shaders/Rainbow Picture.gdshader" id="3_u3xnw"]
+[ext_resource type="Texture2D" uid="uid://b5xb1n2174it8" path="res://icon.svg" id="4_wxt11"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r5xtw"]
+shader = ExtResource("1_jmqdj")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_phy77"]
+shader = ExtResource("2_wxt11")
+shader_parameter/alpha = 0.825195333333281
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5xgsd"]
+shader = ExtResource("2_r5xtw")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t2p1b"]
+shader = ExtResource("3_u3xnw")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Aqua" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_r5xtw")
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="Trinkle" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_phy77")
+offset_left = 384.0
+offset_right = 448.0
+offset_bottom = 64.0
+script = ExtResource("3_t2p1b")
+trinkleTime_s = 0.5
+
+[node name="UV Rainbow" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_5xgsd")
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 64.0
+
+[node name="Rainbow Picture" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_t2p1b")
+position = Vector2(288, 31.999998)
+scale = Vector2(0.50000006, 0.5)
+texture = ExtResource("4_wxt11")
