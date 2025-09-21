@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7h1ockgv2v43"]
+[gd_scene load_steps=13 format=3 uid="uid://b7h1ockgv2v43"]
 
 [ext_resource type="Shader" uid="uid://drat3xfnnvyxv" path="res://Shaders/Aqua Shader.gdshader" id="1_jmqdj"]
+[ext_resource type="Shader" uid="uid://r11x8wl7xtfn" path="res://Shaders/Move Circle.gdshader" id="2_phy77"]
 [ext_resource type="Shader" uid="uid://dobe1jljleig7" path="res://Shaders/UV Rainbow.gdshader" id="2_r5xtw"]
 [ext_resource type="Shader" uid="uid://c3le4un2c85eq" path="res://Shaders/Trinkle.gdshader" id="2_wxt11"]
 [ext_resource type="Script" uid="uid://cv8bwvvmr7anj" path="res://Scripts/trinkle.gd" id="3_t2p1b"]
@@ -10,9 +11,12 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r5xtw"]
 shader = ExtResource("1_jmqdj")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_57pso"]
+shader = ExtResource("2_phy77")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_phy77"]
 shader = ExtResource("2_wxt11")
-shader_parameter/alpha = 0.825195333333281
+shader_parameter/alpha = 0.7532886666666666
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5xgsd"]
 shader = ExtResource("2_r5xtw")
@@ -25,6 +29,12 @@ shader = ExtResource("3_u3xnw")
 [node name="Aqua" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_r5xtw")
 offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="Move Circle" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_57pso")
+offset_left = 512.0
+offset_right = 576.0
 offset_bottom = 64.0
 
 [node name="Trinkle" type="ColorRect" parent="."]
