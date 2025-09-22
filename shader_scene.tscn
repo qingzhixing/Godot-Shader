@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://b7h1ockgv2v43"]
+[gd_scene load_steps=20 format=3 uid="uid://b7h1ockgv2v43"]
 
 [ext_resource type="Shader" uid="uid://drat3xfnnvyxv" path="res://Shaders/Aqua Shader.gdshader" id="1_jmqdj"]
+[ext_resource type="Shader" uid="uid://jy6tebr0q8t4" path="res://Shaders/Lines.gdshader" id="2_7yulc"]
 [ext_resource type="Shader" uid="uid://cycxpd5itgv8o" path="res://Shaders/Circle.gdshader" id="2_57pso"]
 [ext_resource type="Shader" uid="uid://r11x8wl7xtfn" path="res://Shaders/Move Circle.gdshader" id="2_phy77"]
 [ext_resource type="Shader" uid="uid://dobe1jljleig7" path="res://Shaders/UV Rainbow.gdshader" id="2_r5xtw"]
@@ -14,19 +15,22 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r5xtw"]
 shader = ExtResource("1_jmqdj")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ns2d"]
+shader = ExtResource("2_7yulc")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7yulc"]
 shader = ExtResource("2_xs14c")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l7hbs"]
 shader = ExtResource("2_57pso")
-shader_parameter/radius = 0.3674019005227229
+shader_parameter/radius = 0.18951359619995356
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_57pso"]
 shader = ExtResource("2_phy77")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_phy77"]
 shader = ExtResource("2_wxt11")
-shader_parameter/alpha = 0.03333333333333333
+shader_parameter/alpha = 0.07534577777779239
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5xgsd"]
 shader = ExtResource("2_r5xtw")
@@ -40,6 +44,13 @@ shader = ExtResource("3_u3xnw")
 material = SubResource("ShaderMaterial_r5xtw")
 offset_right = 64.0
 offset_bottom = 64.0
+
+[node name="Lines" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6ns2d")
+offset_left = 256.0
+offset_top = 128.0
+offset_right = 320.0
+offset_bottom = 192.0
 
 [node name="Time Loop Rainbow" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_7yulc")
