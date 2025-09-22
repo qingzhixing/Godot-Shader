@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b7h1ockgv2v43"]
+[gd_scene load_steps=18 format=3 uid="uid://b7h1ockgv2v43"]
 
 [ext_resource type="Shader" uid="uid://drat3xfnnvyxv" path="res://Shaders/Aqua Shader.gdshader" id="1_jmqdj"]
 [ext_resource type="Shader" uid="uid://jy6tebr0q8t4" path="res://Shaders/Lines.gdshader" id="2_7yulc"]
@@ -7,8 +7,6 @@
 [ext_resource type="Shader" uid="uid://dobe1jljleig7" path="res://Shaders/UV Rainbow.gdshader" id="2_r5xtw"]
 [ext_resource type="Shader" uid="uid://c3le4un2c85eq" path="res://Shaders/Trinkle.gdshader" id="2_wxt11"]
 [ext_resource type="Shader" uid="uid://dkc2hy8g41w4k" path="res://Shaders/Time Loop Shader.gdshader" id="2_xs14c"]
-[ext_resource type="Script" uid="uid://bvb117gfu0q0k" path="res://Scripts/Circle.cs" id="3_l7hbs"]
-[ext_resource type="Script" uid="uid://cv8bwvvmr7anj" path="res://Scripts/trinkle.gd" id="3_t2p1b"]
 [ext_resource type="Shader" uid="uid://dug3leaejdcvm" path="res://Shaders/Rainbow Picture.gdshader" id="3_u3xnw"]
 [ext_resource type="Texture2D" uid="uid://b5xb1n2174it8" path="res://Assets/Icon/icon.svg" id="4_wxt11"]
 
@@ -23,14 +21,12 @@ shader = ExtResource("2_xs14c")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l7hbs"]
 shader = ExtResource("2_57pso")
-shader_parameter/radius = 0.18951359619995356
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_57pso"]
 shader = ExtResource("2_phy77")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_phy77"]
 shader = ExtResource("2_wxt11")
-shader_parameter/alpha = 0.07534577777779239
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5xgsd"]
 shader = ExtResource("2_r5xtw")
@@ -64,7 +60,6 @@ material = SubResource("ShaderMaterial_l7hbs")
 offset_top = 128.0
 offset_right = 64.0
 offset_bottom = 192.0
-script = ExtResource("3_l7hbs")
 
 [node name="Move Circle" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_57pso")
@@ -77,8 +72,6 @@ material = SubResource("ShaderMaterial_phy77")
 offset_left = 384.0
 offset_right = 448.0
 offset_bottom = 64.0
-script = ExtResource("3_t2p1b")
-trinkleTime_s = 0.5
 
 [node name="UV Rainbow" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_5xgsd")

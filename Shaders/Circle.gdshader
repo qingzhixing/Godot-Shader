@@ -4,11 +4,10 @@ void vertex() {
 	// Called for every vertex the material is visible on.
 }
 
-uniform float radius = 0.4;
-
 const vec2 center = vec2(0.5, 0.5);
 
 void fragment() {
+	float radius = abs(sin(TIME)/4.0)+0.1;
 	float dist = distance(center, UV);
 	float delta = dist - radius;
 	if (delta <= 0.02 && delta>=-0.02) {	
